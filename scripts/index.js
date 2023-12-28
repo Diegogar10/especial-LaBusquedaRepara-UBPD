@@ -290,7 +290,7 @@ const renderVideo = (data, container, clase) => {
 
   img1.src = data.image;
   img1.alt = 'image video';
-  img2.src = './../assets/icon/play-icon.png';
+  img2.src = './assets/icon/play-icon.png';
   img2.alt = 'icon play';
 
   img2.classList.add('icon');
