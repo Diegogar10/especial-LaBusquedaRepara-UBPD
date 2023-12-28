@@ -1,0 +1,79 @@
+.modal {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000F0; 
+  z-index: 2;
+
+  button {
+    position: absolute;
+    top: 90px;
+    right: 200px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 1.2s ease;
+    &:hover {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  .data__container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 185px;
+    left: 15px;
+    width: 295px;
+
+    .title {
+      margin-bottom: 25px;
+      animation: moveIntro 1s ease 0.3s forwards;
+    }
+    
+    .region {
+      margin-bottom: 25px;
+      text-align: end;
+      padding-right: 15px;
+      animation: moveIntro 1s ease 0.6s forwards;
+    }
+    
+    .description {
+      text-align: justify;
+      font-size: 16px;
+      animation: moveIntro 1s ease 0.9s forwards;
+    }
+    
+    h3, p {
+      width: 300px;
+      color: antiquewhite;
+      margin-left: -350px;
+    }
+  }
+
+  .image {
+    width: 640px;
+    height: 480px;
+    object-fit: cover;
+  }
+}
+
+.active {
+  display: flex;
+}
+
+@keyframes moveIntro {
+  to {
+    margin-left: 0px;
+  }
+} 

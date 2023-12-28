@@ -1,0 +1,191 @@
+.sendLetters__container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .multimedia__container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    iframe {
+      margin-top: 70px;
+    }
+
+    button{
+      width: 240px;
+      background: none;
+      border: none;
+      padding: 20px;
+      padding-top: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    figure {
+      width: 280px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .form__container {
+    width: 40%;
+    height: 90%;
+    padding: 25px;
+    padding-bottom: 40px;
+
+    p {
+      text-align: left;
+      font-family: 'Courier-Std';
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .form__content {
+      position: relative;
+      width: 100%;
+      margin-top: 30px;
+
+      .description__container {
+        
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: white;
+        border-radius: 10px;
+        height: 37vh;
+        overflow: hidden;
+        
+        textarea {
+          width: 100%;
+          height: 270px;
+          padding: 5px;
+          font-family: 'Courier-Std';
+          font-size: 14px;
+          margin-bottom: 10px;
+          background: none;
+          border: none;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+        
+
+      }
+             
+      
+      .file__container {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        width: 100px;
+        height: 80px;
+        
+        label {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url(./../assets/icon/icon-add.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          z-index: 1;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        
+        .button__file {
+          display: none;
+        } 
+
+        .message__error {
+          height: 17px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .send__container {
+        position: absolute;
+        top: 130px;
+        right: 20px;
+        width: 100px;
+        height: 80px;
+
+        .button__send {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background: url(./../assets/icon/icon-send.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          
+        }
+      }
+
+      .state__request {
+        .message__error {
+          height: 17px;
+        }
+      }
+
+    }
+  }
+  
+  .x__api {
+    width: 320px;
+    margin-left: 20px;
+  }
+  .sendLetters__button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 60px;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .sendLetters__separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -24px;
+    width: 280px;
+    margin: 0 auto;
+    opacity: 0.7;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

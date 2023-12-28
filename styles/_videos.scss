@@ -1,0 +1,333 @@
+.voices__container {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  .scroll__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
+
+    .voices__title {
+      width: 45vw;
+      height: 98vh;
+      display: flex;
+      padding-top: 100px;
+      padding-right: 40px;
+      flex-direction: column;
+      align-items: end;
+      background-image: url('./../assets/images/postal-videos-1.png');
+      background-repeat: no-repeat;
+      background-size: 85vh;
+      background-position-x: start;
+      background-position-y: bottom;
+  
+      h2 {
+        font-size: 28px;
+        font-family: 'Axiforma-Black', Arial, Helvetica, sans-serif;
+        line-height: 45px;
+        text-align: end;
+  
+        span {
+          font-size: 52px;
+          font-weight: 500;
+          font-family: 'Abril-Italy', cursive;
+        }
+      }
+  
+      p{
+        width: 400px;
+        margin-top: 25px;
+        text-align: end;
+        font-size: 14px;
+        font-family: 'Courier-Std', 'Courier New', Courier, monospace;
+        font-weight: 500;
+      }
+    }
+  
+    .voices__mosaic--container1,
+    .voices__mosaic--container2 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1405px;
+      height: 90vh;
+      margin-left: 7px;
+      overflow: hidden;
+      gap: 7px;
+  
+      .small {
+        width: 275px;
+        height: 20vh;
+      }
+
+      .medium {
+        width: 346px;
+        height: 30vh;
+      }
+
+      .long {
+        width: 463px;
+        height: 40vh;
+      }
+
+      button {
+        position: relative;
+        background: transparent;
+        border: none;
+  
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(100%);
+          transition: $transition-normal;
+          
+          &:nth-child(1) {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+          }
+        }
+
+        &:hover > img:nth-child(2) {
+          filter:grayscale(0%);
+        }
+
+        &:hover > img:nth-child(1) {
+          transform: scale(1.1);
+        }
+      }
+
+    }
+    figure {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      height: 25vh;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+
+  &::-webkit-scrollbar {
+    height: 8px; /* ancho del scrollbar */
+    margin: 5px 0;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #888; /* color del "pulgarcito" (la parte que puedes arrastrar) */
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* color de la pista del scrollbar */
+    border-radius: 5px;
+  }
+
+  .voices__button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: 60px;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .voices__separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -24px;
+    width: 280px;
+    margin: 0 auto;
+    opacity: 0.7;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.voices__container--exterior {
+  position: relative;
+  width: 100%;
+  height: 730px;
+  background: url(./../assets/images/fondo-exterior.png) center;
+  background-size: cover;
+
+  figure {
+    position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .stikers__container {
+    left: -20px;
+    right: 0;
+    top: 0;
+    bottom: -20px;
+  }
+  .video__container--1 {
+    left: 170px;
+    top: 47px;
+    width: 320px;
+  }
+  .video__container--2 {
+    left: 84px;
+    top: 354px;
+    width: 275px;
+  }
+  .video__container--3 {
+    left: 225px;
+    top: 520px;
+    width: 250px;
+  }
+  .video__container--4 {
+    right: 128px;
+    top: 90px;
+    width: 242px;
+  }
+  .video__container--5 {
+    right: 72px;
+    top: 251px;
+    width: 396px;
+  }
+  .scale {
+    transition: $transition-normal;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  .text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+
+    h2 {
+      position: relative;
+      font-size: 35px;
+      font-family: 'Axiforma-Black', Arial, Helvetica, sans-serif;
+      text-align: center;
+      line-height: 40px;
+      padding: 25px;
+      color: white;
+
+      span {
+        font-size: 50px;
+        font-family: 'Abril-Italy', cursive;
+        font-weight: 500;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 120px;
+        height: 4px;
+        margin: 0 auto;
+        background-color: white;
+      }
+    }
+
+    q{
+      color: white;
+      font-size: 21px;
+      text-align: center;
+      font-family: "Abril-Bold-Italy", monospace;
+      padding: 25px 50px 8px 50px;
+      margin-top: 10px;
+      line-height: 23px;
+    }
+
+    h4 {
+      color: white;
+      font-size: 13px;
+      text-align: center;
+      font-family: 'Courier-Std', 'Courier New', Courier, monospace;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      font-family: 'Courier-Std', 'Courier New', Courier, monospace;
+      padding: 8px 50px;
+      font-weight: bold;
+    }
+  }
+  .exterior__button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: 60px;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .exterior__separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -24px;
+    width: 280px;
+    margin: 0 auto;
+    opacity: 0.7;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+

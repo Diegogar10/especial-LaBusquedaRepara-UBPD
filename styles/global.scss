@@ -1,0 +1,30 @@
+$color-orange:#F2961F;
+$transition-normal: all 1s ease-in-out;
+$transition-quick: all 0.5s ease-in-out;
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: url(../assets/images/fondo-principal.png) repeat;
+  background-size:contain;
+}
+
+@import 'asaid';
+@import 'modalBoard';
+@import 'fonts';
+@import 'header';
+@import 'title';
+@import 'intro';
+@import 'videos';
+@import 'letters';
+@import 'form';
+@import 'carrusel';
+@import 'contact';
+@import 'modal';
+

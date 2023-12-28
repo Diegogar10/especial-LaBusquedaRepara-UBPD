@@ -1,0 +1,230 @@
+.especial__content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 100%;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header__container {
+    width: 100%;
+
+    .header__frontPage {
+      max-width: 1024px;
+      width: 100%;
+      max-height: 768px;
+      height: 590px;
+      margin: 0 auto;
+      position: relative;
+      background: url(../assets/images/collage-sin-foto.png) no-repeat center;
+      background-size:contain;
+      
+      li {
+        width: 50px;
+        position: absolute;
+        list-style: none;
+        opacity: 0;
+        transition: all ease 0.5s;
+
+        &:nth-child(1) {    
+          top: -51px;
+          left: 55px;
+          width: 119px;
+        }
+        &:nth-child(2) {
+          top: 4px;
+          left: 240px;
+          width: 39px;
+        }
+        &:nth-child(3) {
+          top: 27px;
+          left: 412px;
+          width: 38px;
+        }
+        &:nth-child(4) {
+          top: 38px;
+          left: 643px;
+          width: 41px;
+        }
+        &:nth-child(5) {
+          top: 127px;
+          left: 780px;
+          width: 37px;
+        }
+        &:nth-child(6) {
+          top: 121px;
+          left: 89px;
+          width: 52px;
+        }
+        &:nth-child(7) {
+          top: 89px;
+          left: 281px;
+          width: 57px;
+        }
+        &:nth-child(8) {
+          top: 122px;
+          left: 431px;
+          width: 90px;
+        }
+        &:nth-child(9) {
+          top: 166px;
+          left: 525px;
+          width: 30px;
+        }
+        &:nth-child(10) {
+          top: 219px;
+          left: 715px;
+          width: 64px;
+        }
+        &:nth-child(11) {
+          top: 115px;
+          left: 862px;
+          width: 98px;
+        }
+        &:nth-child(12) {
+          top: 271px;
+          left: 50px;
+          width: 105px;
+        }
+        &:nth-child(13) {
+          top: 197px;
+          left: 189px;
+          width: 105px;
+        }
+        &:nth-child(14) {
+          top: 313px;
+          left: 161px;
+          width: 92px;
+        }
+        &:nth-child(15) {
+          top: 260px;
+          left: 392px;
+          width: 129px;
+        }
+        &:nth-child(16) {
+          top: 424px;
+          left: 435px;
+          width: 31px;
+        }
+        &:nth-child(17) {
+          top: 297px;
+          left: 557px;
+          width: 66px;
+        }
+        &:nth-child(18) {
+          top: 302px;
+          left: 743px;
+          width: 83px;
+        }
+        &:nth-child(19) {
+          top: 326px;
+          left: 864px;
+          width: 131px;
+        }
+        &:nth-child(20) {
+          top: 460px;
+          left: -22px;
+          width: 75px;
+        }
+        &:nth-child(21) {
+          top: 465px;
+          left: 262px;
+          width: 51px;
+        }
+        &:nth-child(22) {
+          top: 560px;
+          left: 392px;
+          width: 60px;
+        }
+        &:nth-child(23) {
+          top: 531px;
+          left: 578px;
+          width: 104px;
+        }
+        &:nth-child(24) {
+          top: 485px;
+          left: 743px;
+          width: 61px;
+        }
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      
+      .visible {
+        opacity: 1;
+      }
+
+      .header__button{
+        position: absolute;
+        left: 472px;
+        bottom: 30px;
+        width: 60px;
+        background: none;
+        border: none;
+        transition: all 0.5s ease;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .header__separator {
+        position: absolute;
+        left: 365px;
+        bottom: -24px;
+        width: 280px;
+        opacity: 0.7;
+
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes timeVisible1{
+ 0%{
+    opacity: 0;
+ }
+ 35% {
+    opacity: 1;
+ }
+ 90%{
+    opacity: 1;
+ }
+ 95%{
+    opacity: 0;
+ }
+}
+@keyframes timeVisible2{
+  0%{
+     opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  75% {
+     opacity: 1;
+  }
+  95%{
+     opacity: 1;
+  }
+  100%{
+     opacity: 0;
+  }
+}

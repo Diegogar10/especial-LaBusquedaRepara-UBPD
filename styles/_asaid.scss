@@ -1,0 +1,63 @@
+.nav__side {
+  position:fixed;
+  left: 0;
+  top: 10px;
+  width: 100px;
+  height: 400px;
+  z-index: 1;
+  
+  a {
+    width: 100%;
+    padding: 15px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  nav{
+    background-color: #6A392B;
+    height: 100%;
+    width: 70px;
+    margin-top: 15px;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+  }
+  
+  ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    button{
+      width: 54px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 7px;
+      border-radius: 3px;
+      border-bottom: 1px solid white;
+
+      &:hover {
+        background: $color-orange;
+      }
+    }
+
+    button.selected {
+      background-color: $color-orange;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  ul  :last-child {
+    border: none;
+  }
+}

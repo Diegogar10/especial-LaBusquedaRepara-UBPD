@@ -1,0 +1,138 @@
+.intro__container {
+
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .background__sticky1, 
+  .background__sticky2,
+  .background__sticky3,
+  .background__sticky4 {
+    position: absolute;
+    
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .background__sticky1 {
+    left: 0;
+    top: 0;
+    width: 275px;
+  }
+  .background__sticky2 {
+    left: 0;
+    bottom: 0;
+    width: 230px;
+  }
+  .background__sticky3 {
+    right: 0;
+    top: 0;
+    width: 350px;
+  }
+  .background__sticky4 {
+    right: 0;
+    bottom: 0;
+    width: 265px;
+  }
+  
+  
+  .text__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: $transition-normal;
+
+    .subtitle2 {
+    
+      h2{
+        font-size: 90px;
+        color: $color-orange;
+        font-family: 'Axiforma-Black', Arial, Helvetica, sans-serif;
+        text-align: center;
+        line-height: 70px;
+  
+        span {
+          color: black;
+          font-size: 65px;
+          font-family: 'segoe script', cursive;
+          text-transform: lowercase;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  
+    .intro__content { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 680px;
+      margin: 30px auto;
+  
+      h3 {
+        font-size:25px;
+        font-family: 'Abril-Bold-Italy', monospace;
+        margin-bottom: 20px;
+      }
+  
+      p{
+        font-size: 14px;
+        font-family: 'Courier-Std', 'Courier New', Courier, monospace;
+        text-align: center;
+        font-weight: bold;
+  
+        span {
+          background-color: $color-orange;
+        }
+      }
+    }
+  }
+  .text__container.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .text__button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: 60px;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text__separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -24px;
+    width: 280px;
+    margin: 0 auto;
+    opacity: 0.7;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
