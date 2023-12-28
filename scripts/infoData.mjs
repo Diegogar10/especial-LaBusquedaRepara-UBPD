@@ -192,7 +192,7 @@ export { dataVideos1 };
 
 // info cartas 
 
-const url = './..';
+const url = '.';
 
 const carta_1_1 = url +'/assets/cartas/categoria1/carta1.jpg';
 const carta_1_2 = url +'/assets/cartas/categoria1/carta2.jpg';
