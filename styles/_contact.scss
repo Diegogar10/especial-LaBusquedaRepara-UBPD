@@ -97,3 +97,31 @@
     height: 220px;
   }
 }
+@media (max-width: 1024px) {
+  .contact__container {
+    .text__container {
+      margin-left: 12%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__container {
+    .text__container {
+      margin-left: 7%;
+      margin-top: 60px;
+    }
+    .credicts__container {
+      align-items: center;
+
+      p, h4 {
+        width: 85%;
+        padding-right: 15px;
+      }
+
+      p{
+        text-align: justify;
+      }
+    }
+  }
+}

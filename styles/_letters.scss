@@ -290,3 +290,29 @@
     }
   }
 }
+
+@media (max-width: 768px) { 
+  .letters__container {
+    .letter__intro {
+      height: 50vh;
+      .text__container {
+        h2 {
+          margin-top: 18px;
+          font-size: 43px;
+          line-height: 50px;
+          padding: 30px;
+        }
+        p {
+          margin-top: 30px;
+          width: 40%;
+        }
+      }
+    }
+    .letters__list { 
+      height: 50vh;
+      .letters__carrusel {
+        height: 67%;
+      }
+    }
+  }
+}

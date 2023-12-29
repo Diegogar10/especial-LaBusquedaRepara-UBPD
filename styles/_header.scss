@@ -1,6 +1,6 @@
 .especial__content {
   position: relative;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
   margin-top: 25px;
   width: 100%;
@@ -228,3 +228,114 @@
      opacity: 0;
   }
 }
+
+@media (max-width: 1024px) { 
+  .especial__content {
+    .header__container {
+      overflow: hidden;
+      .header__frontPage {
+        width: 1024px;
+
+        .header__button {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+} 
+
+@media (max-width: 768px) { 
+  .especial__content {
+    .header__container {
+      .header__frontPage {
+        width: 768px;
+        height: 1000px;
+        background: url(../assets/images/collage-sin-foto2.png) no-repeat center;
+      
+        li {
+          &:nth-child(1),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(10),
+          &:nth-child(11),
+          &:nth-child(12),
+          &:nth-child(18),
+          &:nth-child(19),
+          &:nth-child(20),
+          &:nth-child(21),
+          &:nth-child(22),
+          &:nth-child(23),
+          &:nth-child(24) {    
+            display: none;
+          }
+          &:nth-child(2) {
+            top: -94px;
+            left: 3px;
+            width: 75px;
+          }
+          &:nth-child(3) {
+            top: -55px;
+            left: 292px;
+            width: 66px;
+          }
+          &:nth-child(4) {
+            top: -34px;
+            left: 723px;
+            width: 75px;
+          }
+          &:nth-child(7) {
+            top: 58px;
+            left: 47px;
+            width: 102px;
+          }
+          &:nth-child(8) {
+            top: 119px;
+            left: 322px;
+            width: 174px;
+          }
+          &:nth-child(9) {
+            top: 204px;
+            left: 498px;
+            width: 58px;
+          }
+          &:nth-child(12) {
+            top: 271px;
+            left: 50px;
+            width: 105px;
+          }
+          &:nth-child(13) {
+            top: 197px;
+            left: 189px;
+            width: 105px;
+          }
+          &:nth-child(14) {
+            display: none;
+          }
+          &:nth-child(15) {
+            top: 378px;
+            left: 252px;
+            width: 242px;
+          }
+          &:nth-child(16) {
+            top: 682px;
+            left: 320px;
+            width: 81px;
+          }
+          &:nth-child(17) {
+            top: 449px;
+            left: 558px;
+            width: 127px;
+          }
+          
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      
+      }
+    }
+  }
+} 

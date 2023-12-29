@@ -17,13 +17,19 @@ const addClassInvisible = () => {
 }
 
 const visibleStepVideos = () => {
+  if(window.innerWidth<780) {
+    containerOnboard.style.top = '3760px';
+    containerAction.style.top = '3560px';
+    containerAction.style.right = '246px';
+  } else {
+    containerOnboard.style.top = '2620px';
+    containerAction.style.top = '2405px';
+    containerAction.style.right = '700px';
+  }
   containerOnboard.style.width = '100%';
   containerOnboard.style.height = '30px';
-  containerOnboard.style.top = '2620px';
   containerOnboard.style.left = '0px';
   containerAction.style.width = '280px';
-  containerAction.style.top = '2405px';
-  containerAction.style.right = '700px';
   textoContainerAction.innerHTML = 'Mueve el cursor hacia la izquierda para ver y escuchar cada uno de los relatos de las y los familiares que buscan.';
   containerAction.classList.remove('invisible');
   containerBloq.classList.remove('invisible');
@@ -31,14 +37,23 @@ const visibleStepVideos = () => {
 }
 
 const visibleStepExterior = () => {
+
+  if(window.innerWidth<780) {
+    containerOnboard.style.top = '3905px';
+    containerOnboard.style.left = '0px';
+    containerOnboard.style.right = '-500px';
+    containerAction.style.top = '3905px';
+    containerAction.style.right = '300px';
+  } else {
+    containerOnboard.style.top = '2870px';
+    containerOnboard.style.left = '0px';
+    containerOnboard.style.right = '-960px';
+    containerAction.style.top = '2770px';
+    containerAction.style.right = '500px';
+  }
   containerOnboard.style.width = '220px';
   containerOnboard.style.height = '150px';
-  containerOnboard.style.top = '2770px';
-  containerOnboard.style.left = '0px';
-  containerOnboard.style.right = '-960px';
   containerAction.style.width = '310px';
-  containerAction.style.top = '2770px';
-  containerAction.style.right = '500px';
   textoContainerAction.innerHTML = 'Dale clic a los objetos para ver y escuchar cada una de las historias de las personas que buscan a sus seres queridos desde el exterior.';
   containerAction.classList.remove('invisible');
   containerBloq.classList.remove('invisible');

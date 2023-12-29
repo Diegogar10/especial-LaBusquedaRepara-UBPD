@@ -21,7 +21,7 @@
   top: 101px;
   padding: 0 15px;
   height: 170px;
-  width: 240px;
+  width: 250px;
   border-radius: 7px;
   background-color: white;
   z-index: 4;
@@ -75,4 +75,30 @@
 .action__container.invisible, 
 .modal__onboarding.invisible {
   display: none;
+}
+
+
+@media (max-width: 1300px) { 
+  .action__container {
+    right: 190px;
+  }
+}
+
+@media (max-width: 1024px) { 
+  .action__container {
+    top: 401px;
+  }
+  .modal__onboarding {
+    left: 0;
+    right: 0;
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) { 
+  
+  .modal__onboarding {
+    width: 280px;
+    height: 250px;
+  }
 }

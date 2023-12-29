@@ -45,20 +45,17 @@
       }
     }
   }
-
   .form__container {
     width: 40%;
     height: 90%;
     padding: 25px;
     padding-bottom: 40px;
-
     p {
       text-align: left;
       font-family: 'Courier-Std';
       font-size: 14px;
       font-weight: 500;
     }
-    
     .form__content {
       position: relative;
       width: 100%;
@@ -100,10 +97,52 @@
 
     }
   }
-  
   .x__api {
     width: 320px;
     margin-left: 20px;
+
+    .form__content {
+      display: none;
+      position: relative;
+      width: 100%;
+      margin-top: 30px;
+
+      .description__container {
+        
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: white;
+        border-radius: 10px;
+        height: 37vh;
+        padding: 10px 20px 10px 35px;
+        overflow: hidden;
+        
+        h2, li {
+          width: 100%;
+          font-family: 'Courier-Std';
+          font-size: 14px;
+          margin: 3px 0;
+        }
+
+        h2{
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+      }
+             
+      
+
+      .state__request {
+        .message__error {
+          height: 17px;
+        }
+      }
+
+    }
+
   }
   .sendLetters__button{
     position: absolute;
@@ -126,7 +165,6 @@
       object-fit: cover;
     }
   }
-
   .sendLetters__separator {
     position: absolute;
     left: 0;
@@ -139,6 +177,84 @@
     img{
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sendLetters__container {
+    .multimedia__container {
+      width: 25%;
+    }
+    .form__container {
+      width: 40%;
+      height: 99%;
+      padding: 11px;
+      padding-bottom: 10px;
+
+      #form__letter {
+        margin-top: 10px;
+
+        .description__container {
+          
+          height: 44vh; 
+
+          h2 {
+            font-size: 17px;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+    .x__api {
+      width: 290px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sendLetters__container {
+    flex-wrap: wrap;
+    padding: 20px 30px;
+
+    .multimedia__container {
+      width: 30%;
+      height: 45vh;
+      margin-left: 85px;
+
+      iframe {
+        margin-top: 16px;
+      }
+      a {
+        button {
+          padding: 0;
+          width: 184px;
+        }
+      }
+      figure {
+        width: 210px;
+      }
+    }
+    .form__container {
+      width: 55%;
+      padding: 10px 35px;
+      height: 45vh;
+      .form__content {
+        display: none;
+      }
+      
+    }
+    .x__api {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+
+      .form__content {
+        display: block;
+        margin-right: 35px;
+        width: 62%;
+      }
     }
   }
 }

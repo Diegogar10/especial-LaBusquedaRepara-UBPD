@@ -152,3 +152,32 @@
     }
   }
 }
+
+@media (max-width: 1024px) { 
+  .intro__container {
+    .text__container {
+      width: 95%;
+      height: 90vh;
+      
+      .subtitle2 {
+      
+        h2{ 
+          font-size: 75px;
+          line-height: 60px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) { 
+  .intro__container {
+    .text__container {
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+      .intro__content {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -191,3 +191,40 @@
     }
   }
 }
+@media (max-width: 1024px) {
+  .search__container {
+    .scroll__container {
+      .text__container {
+        width: 63vw;
+        article {
+          h2 {
+            font-size: 30px;
+
+            span {
+              font-size: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .search__container {
+    height: 200vh;
+    .scroll__container { 
+      flex-direction: column;
+      .text__container {
+        width: 100vw;
+        article {
+          margin: 50px 30px;
+          width: 375px;
+        }
+      }
+      .galery__container {
+        height: 99vh;
+      }
+    }
+  }
+}
