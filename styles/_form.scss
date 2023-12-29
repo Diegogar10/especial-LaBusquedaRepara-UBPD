@@ -16,16 +16,23 @@
       margin-top: 70px;
     }
 
-    button{
-      width: 240px;
-      background: none;
-      border: none;
-      padding: 20px;
-      padding-top: 40px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    a {
+      transition: $transition-quick;
+      button{
+        width: 240px;
+        background: none;
+        border: none;
+        padding: 20px;
+        padding-top: 40px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
 
@@ -66,78 +73,24 @@
         background: white;
         border-radius: 10px;
         height: 37vh;
+        padding: 10px 20px 10px 35px;
         overflow: hidden;
         
-        textarea {
+        h2, li {
           width: 100%;
-          height: 270px;
-          padding: 5px;
           font-family: 'Courier-Std';
           font-size: 14px;
-          margin-bottom: 10px;
-          background: none;
-          border: none;
-
-          &:focus {
-            border: none;
-            outline: none;
-          }
+          margin: 3px 0;
         }
-        
+
+        h2{
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
 
       }
              
       
-      .file__container {
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        width: 100px;
-        height: 80px;
-        
-        label {
-          display: block;
-          width: 100%;
-          height: 100%;
-          background: url(./../assets/icon/icon-add.png);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          z-index: 1;
-
-          &:hover {
-            cursor: pointer;
-          }
-        }
-        
-        .button__file {
-          display: none;
-        } 
-
-        .message__error {
-          height: 17px;
-          margin-bottom: 5px;
-        }
-      }
-
-      .send__container {
-        position: absolute;
-        top: 130px;
-        right: 20px;
-        width: 100px;
-        height: 80px;
-
-        .button__send {
-          width: 100%;
-          height: 100%;
-          border: none;
-          background: url(./../assets/icon/icon-send.png);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          
-        }
-      }
 
       .state__request {
         .message__error {

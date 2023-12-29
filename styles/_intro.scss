@@ -44,7 +44,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    padding-top: 50px;
     transform: translateY(100px);
     opacity: 0;
     transition: $transition-normal;
@@ -73,13 +74,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 680px;
-      margin: 30px auto;
+      width: 690px;
+      margin: 10px auto;
   
       h3 {
         font-size:25px;
         font-family: 'Abril-Bold-Italy', monospace;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
   
       p{
@@ -90,6 +91,21 @@
   
         span {
           background-color: $color-orange;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #6A392B;
+        font-size: 14px;
+        background-color: $color-orange;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-family: 'Courier-Std', 'Courier New', Courier, monospace;
+        
+        &:hover {
+          color: white;
+          background-color: #6A392B;
         }
       }
     }

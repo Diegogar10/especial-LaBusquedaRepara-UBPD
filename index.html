@@ -17,7 +17,7 @@
 </head>
 <body>
   <aside class="nav__side">
-    <a target="_blank" href="https://unidadbusqueda.gov.co">
+    <a target="_blank" href="https://unidadbusqueda.gov.co/acerca-ubpd/">
       <img src="./assets/icon/logo-oscuro.png" alt="Logo enlace UBPD">
     </a>
     <nav>
@@ -37,7 +37,7 @@
     <div class="bloq__container">
     </div>
     <div class="action__container">
-      <p>Pase por encima ó de click en la silueta en blanco, verá como aparece la persona.</p>
+      <p> Pasa el cursor sobre cualquiera fotografías para ver el rostro de la persona que está ausente.</p>
       <button>Continuar</button>
     </div>
     <section class="header__container">
@@ -142,6 +142,7 @@
           <p>Esta frase, que es casi como un mantra, alimenta la esperanza de las familias en Colombia que buscan a algún ser querido desaparecido debido al conflicto armado. Son miles y miles de madres, padres, hijas, hijos, hermanas, hermanos, parejas y demás familiares o allegados que recuerdan a los ausentes por la guerra a través de álbumes fotográficos, escritos, pinturas, tejidos… Todo tipo de objetos que los evoca permanentemente, que los mantiene presentes pese al vacío físico y la incertidumbre sobre lo que les pudo ocurrir.</p><br>
           <p>Hasta el primero de diciembre de 2016, al menos 100.000 personas desaparecieron en medio del conflicto armado colombiano según los registros de la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD). Quienes les buscan llevan décadas abriendo espacios para que escuchen sus historias y las de sus seres queridos desaparecidos. Y, claro está, para preguntar: <span>¿dónde están?</span></p><br>
           <p>Este especial transmedia recoge las voces, las imágenes y las memorias de un grupo de familias buscadoras de diferentes regiones del país y de personas que viven en el exilio pero que buscan desde el exterior. Si bien esto es apenas un compilado de historias, se  trata de un llamado a la sociedad colombiana para que se una al camino de la búsqueda y no olviden a los que siguen ausentes.</p><br>
+          <a href="https://unidadbusqueda.gov.co/acerca-ubpd/" target="_blank">¿Qué es la UBPD y cómo hace la búsqueda?</a>
         </div>
       </div>
       <button class="text__button">
@@ -191,7 +192,10 @@
         <img src="./assets/images/camara-video.png" alt="icono video exterior 4">
       </figure>
       <figure class="video__container--5 scale">
-        <img src="./assets/images/maleta-video.png" alt="icono video exterior 5">
+        <img src="./assets/images/flor-video.png" alt="icono video exterior 5">
+      </figure>
+      <figure class="video__container--6 scale">
+        <img src="./assets/images/maleta-video.png" alt="icono video exterior 6">
       </figure>
       <div class="text__container">
         <h2>Buscar
@@ -239,7 +243,7 @@
             <img src="./assets/icon/boton-cartas-1.png" alt="icono boton categoria 1">
           </button>
           <button class="category2">
-            <img src="./assets/icon/boton-cartas-2.png" alt="icono boton categoria 2">
+            <img src="./assets/icon/boton-cartas-2-on.png" alt="icono boton categoria 2">
           </button>
           <button class="category3">
             <img src="./assets/icon/boton-cartas-3.png" alt="icono boton categoria 3">
@@ -270,9 +274,11 @@
     <section class="sendLetters__container">
       <div class="multimedia__container">
         <iframe width="300" height="180" src="https://www.youtube.com/embed/PYyNfpRAATk?si=YJR0BCvLGq12fSuq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <button>
-          <img src="./assets/icon/icon-download.png" alt="icono boton descarga">
-        </button>
+        <a href="./assets/cartas/plantilla-cartas.pdf" download="plantilla.pdf">
+          <button>
+            <img src="./assets/icon/icon-download.png" alt="icono boton descarga">
+          </button>
+        </a>
         <figure>
           <img src="./assets/images/fondo-buzon.png" alt="fondo buzon cartas">
         </figure>
@@ -283,19 +289,14 @@
         <br><p>A través de una o varias cartas, puedes enviar mensajes de esperanza a las miles de personas que buscan en nuestro país. Descarga el formato que diseñamos, agrega tus texto y envíalas a través del siguiente buzón. También te invitamos a compartir las cartas en la red social X junto con la etiqueta <strong>#LaBúsquedaRepara</strong> para que aparezcan en este especial.</p>
         <form id="form__letter" action="" class="form__content" enctype="multipart/form-data">
           <div class="description__container">
-            <textarea name="description" id="description"" cols="30" rows="10"></textarea>
-            <p class="message__error"></p>
-          </div>
-          <div class="file__container">
-            <label for="archivo"></label>
-            <input class="button__file" type="file" name="archivo" id="archivo" accept=".jpeg, .jpg, .png, .gif">
-            <p class="message__error"></p>
-          </div>
-          <div class="send__container">
-            <input class="button__send" type="submit" value="">
-          </div>
-          <div class="state__request">
-            <p class="message__error"></p>
+            <h2>Paso a paso para enviar tu carta</h2>
+            <ol>
+              <li>Descarga el formato de las cartas. Es un documento en PDF que encuentras en el ícono de sobre.</li>
+              <li>Imprime el documento las veces que quieras y escribe tus mensajes. Recuerda que los destinatarios son las miles de familias que buscan a un ser querido desaparecido, por lo que puedes redactar una o varias cartas.</li>
+              <li>Tómales una foto o escanea las cartas.</li>
+              <li>Envíalas al correo electrónico <a target="_blank" class="mail__button" href="mailto:comunicaciones@ubpdbusquedadesaparecidos.co?subject=Envio de carta&body=Tu descripción (opcional) ">comunicaciones@ubpdbusquedadesaparecidos.co</a></li>
+              <li>También puedes publicarlas en la red social X (Twitter) con la etiqueta #LaBúsquedaRepara.</li>
+            </ol>
           </div>
         </form>
       </div>
@@ -383,12 +384,13 @@
         <p>Si desea que llevemos la exposición <span>'El camino de la búsqueda'</span> a tu municipio, institución, colegio, universidad u organización  dentro y fuera de Colombia, escríbanos:</p>
       </div>
       <div class="credicts__container">
-        <p>Directora general de la UBPD: Luz Janeth Forero Martínez | Jefatura de la Oficina Asesora de Comunicaciones y Pedagogía: Eliana Castellanos Díaz | Coordinación de contenidos y estrategia: Daniel Sarmiento - José Puentes | Diseño: Lizeth Sanabria - Natalia Hernández | Desarrollo web: Diego García | Video: Gabriel Muelle - Carlos Cely - Jorge Leyton | Reportería en territorio: Liliana Núñez (Barrancabermeja), Mauricio Parada (Cúcuta), Deisy Tividor (Yopal), Alexandra Rodríguez (Mocoa), Jenny Perdomo (Ibagué), José Ríos (Barranquilla),  Maris Mosquera (Valledupar), José Iriarte (Sincelejo), Ivonne Bula (Montería), Alejandra Balvin (Apartadó), Danilo León Carrillo (Arauca), María Alejandra Ardila (Florencia), Carolina Revelo Rodríguez (Pasto), David Torres (Cali), Ingrid Carolina Serrate Caldera (Popayán), Sergio Guevara (Villavicencio), Claudia Marcela Quintero Lemos (Quibdó), Camilo Gallego (Medellín) | Corrección de estilo: Yeiver Rivera | Divulgación en redes sociales: Sebastián Castro</p>
+        <p>Directora general de la UBPD: Luz Janeth Forero Martínez | Jefatura de la Oficina Asesora de Comunicaciones y Pedagogía: Eliana Castellanos Díaz | Coordinación de contenidos y estrategia: Daniel Sarmiento - José Puentes | Diseño: Lizeth Sanabria - Natalia Hernández | Desarrollo web: Diego García | Video: Gabriel Muelle - Carlos Cely - Jorge Leyton | Reportería en territorio: Liliana Núñez (Barrancabermeja), Mauricio Parada (Cúcuta), Deisy Tividor (Yopal), Alexandra Rodríguez (Mocoa), Jenny Perdomo (Ibagué), José Ríos (Barranquilla),  Maris Mosquera (Valledupar), José Iriarte (Sincelejo), Ivonne Bula (Montería), Alejandra Balvin (Apartadó), Danilo León Carrillo (Arauca), María Alejandra Ardila (Florencia), Carolina Revelo Rodríguez (Pasto), David Torres (Cali), Ingrid Carolina Serrate Caldera (Popayán), Sergio Guevara (Villavicencio), Claudia Marcela Quintero Lemos (Quibdó), Camilo Gallego (Medellín), Juan Carlos Henao (Bogotá) | Corrección de estilo: Yeiver Rivera | Divulgación en redes sociales: Sebastián Castro</p>
         <h4>Todos los derechos reservados<br><span>UBPD – Unidad de Búsqueda de Personas Dadas por Desaparecidas. 2023</span></h4>
       </div>
       <a target="_blank" class="mail__button" href="mailto:comunicaciones@ubpdbusquedadesaparecidos.co?subject=Exposición de la busqueda&body=Queremos tener la exposición en: "></a>
     </section>
     <div class="modal">
+      <img src="./assets/icon/icon-close.png" alt="boton cerrar modal">
     </div>
   </main>
 </body>

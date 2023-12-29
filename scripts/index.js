@@ -1,37 +1,62 @@
-import {dataVideos1, dataLetters} from "./infoData.mjs";
+import {dataVideos1, dataVideos2, dataLetters} from "./infoData.mjs";
 
 //Funcionalidad Modal guía de inicio
 
 const containerOnboard = document.querySelector('.modal__onboarding');
 const containerBloq = document.querySelector('.bloq__container');
 const containerAction = document.querySelector('.action__container');
+const textoContainerAction = document.querySelector('.action__container>p');
 const silueta8 = document.querySelector('.header__frontPage>li:nth-child(8)');
 const buttonAction = document.querySelector('.action__container>button')
 
 const addClassInvisible = () => {
+  containerOnboard.removeEventListener('mouseover', visibleHandle);
   containerAction.classList.add('invisible');
   containerBloq.classList.add('invisible');
   containerOnboard.classList.add('invisible');
+}
+
+const visibleStepVideos = () => {
+  containerOnboard.style.width = '100%';
+  containerOnboard.style.height = '30px';
+  containerOnboard.style.top = '2620px';
+  containerOnboard.style.left = '0px';
+  containerAction.style.width = '280px';
+  containerAction.style.top = '2405px';
+  containerAction.style.right = '700px';
+  textoContainerAction.innerHTML = 'Mueve el cursor hacia la izquierda para ver y escuchar cada uno de los relatos de las y los familiares que buscan.';
+  containerAction.classList.remove('invisible');
+  containerBloq.classList.remove('invisible');
+  containerOnboard.classList.remove('invisible');
+}
+
+const visibleStepExterior = () => {
+  containerOnboard.style.width = '220px';
+  containerOnboard.style.height = '150px';
+  containerOnboard.style.top = '2770px';
+  containerOnboard.style.left = '0px';
+  containerOnboard.style.right = '-960px';
+  containerAction.style.width = '310px';
+  containerAction.style.top = '2770px';
+  containerAction.style.right = '500px';
+  textoContainerAction.innerHTML = 'Dale clic a los objetos para ver y escuchar cada una de las historias de las personas que buscan a sus seres queridos desde el exterior.';
+  containerAction.classList.remove('invisible');
+  containerBloq.classList.remove('invisible');
+  containerOnboard.classList.remove('invisible');
 }
 
 const visibleHandle = () => {
   silueta8.classList.add('visible');
   setTimeout(()=>{
     addClassInvisible();
-  }, 1500);
+  }, 1000);
 }
 
-buttonAction.onclick = () => {
-  addClassInvisible();
-}
+buttonAction.onclick = addClassInvisible;
 
-containerOnboard.onmouseover = () => {
-  visibleHandle();
-}
+containerOnboard.addEventListener('mouseover',visibleHandle);
 
-containerOnboard.onclick = () => {
-  visibleHandle();
-}
+containerOnboard.onclick = visibleHandle;
 
 //Funcionalidad botones del menu lateral
 
@@ -52,6 +77,8 @@ const galeryMainContainer = document.querySelector('.search__container');
 const footerMainContainer = document.querySelector('.contact__container');
 
     //observador para dinamismo del menú
+let conditionInitial1 = false;
+let conditionInitial2 = false;
 
 const addClassButtonSelected = (clase) => {
   switch (clase) {
@@ -66,6 +93,12 @@ const addClassButtonSelected = (clase) => {
       
       break;
     case 'voices__container':
+      
+      if(!conditionInitial1) {
+        visibleStepVideos();
+        conditionInitial1 = true;
+      }
+
       navVideos.classList.add('selected');
       
       navHome.classList.remove('selected');
@@ -76,6 +109,12 @@ const addClassButtonSelected = (clase) => {
 
       break;
     case 'voices__container--exterior':
+
+      if(!conditionInitial2) {
+        visibleStepExterior();
+        conditionInitial2 = true;
+      }
+
       navExterior.classList.add('selected');
       
       navHome.classList.remove('selected');
@@ -262,13 +301,16 @@ const toggleModal = () => {
 
 const viewVideo = (data) => {
   const fragmentHTML = `
-    <button onclick="toggleModal">X</button>
-    <iframe width="672" height="378" src=${data.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="data__container">
-        <h3 class="title">${data.title}</h3>
-        <p class="region">${data.region}</p>
-        <p class="description">${data.description}</p>
-      </div>
+    <div class="video__container">
+      <iframe width="806" height="454" src=${data.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="data__container">  
+      <button onclick="toggleModal">
+        <img src="./assets/icon/icon-close.png" alt="boton cerrar modal">
+      </button>
+      <p class="region">${data.region}</p>
+      <h3 class="title">${data.title}</h3>
+    </div>
   `;
   modalContainer.innerHTML=fragmentHTML;
   toggleModal();
@@ -327,6 +369,35 @@ dataVideos1.forEach((item, index)=> {
   
   renderVideo(item, container,clase);
 });
+
+
+//Funcionalidad de botones videos del exterior
+
+const buttonVideoExterior1 = document.querySelector('.video__container--1');
+const buttonVideoExterior2 = document.querySelector('.video__container--2');
+const buttonVideoExterior3 = document.querySelector('.video__container--3');
+const buttonVideoExterior4 = document.querySelector('.video__container--4');
+const buttonVideoExterior5 = document.querySelector('.video__container--5');
+const buttonVideoExterior6 = document.querySelector('.video__container--6');
+
+buttonVideoExterior1.onclick = () => {
+  viewVideo(dataVideos2[0]);
+}
+buttonVideoExterior2.onclick = () => {
+  viewVideo(dataVideos2[1]);
+}
+buttonVideoExterior3.onclick = () => {
+  viewVideo(dataVideos2[2]);
+}
+buttonVideoExterior4.onclick = () => {
+  viewVideo(dataVideos2[3]);
+}
+buttonVideoExterior5.onclick = () => {
+  viewVideo(dataVideos2[4]);
+}
+buttonVideoExterior6.onclick = () => {
+  viewVideo(dataVideos2[5]);
+}
 
 //Funcionalidad reproduccion animacion de cartas cuando la sección entra en viewport
 
@@ -391,20 +462,40 @@ addLettersByCategory(1);
 // Función mostrar cartas por categorias a traves de botones de categorias
 
 const botonCategoria1 = document.querySelector('.category1');
+const iconCategoria1 = document.querySelector('.category1>img');
 const botonCategoria2 = document.querySelector('.category2');
+const iconCategoria2 = document.querySelector('.category2>img');
 const botonCategoria3 = document.querySelector('.category3');
+const iconCategoria3 = document.querySelector('.category3>img');
 const botonCategoria4 = document.querySelector('.category4');
+const iconCategoria4 = document.querySelector('.category4>img');
+
+const resetStateButtons = () => {
+  iconCategoria1.src = "./assets/icon/boton-cartas-1.png";
+  iconCategoria2.src = "./assets/icon/boton-cartas-2.png";
+  iconCategoria3.src = "./assets/icon/boton-cartas-3.png";
+  iconCategoria4.src = "./assets/icon/boton-cartas-4.png";
+}
+
 
 botonCategoria1.onclick = () => {
+  resetStateButtons();
+  iconCategoria1.src = "./assets/icon/boton-cartas-1-on.png";
   addLettersByCategory(0);
 }
 botonCategoria2.onclick = () => {
+  resetStateButtons();
+  iconCategoria2.src = "./assets/icon/boton-cartas-2-on.png";
   addLettersByCategory(1);
 }
 botonCategoria3.onclick = () => {
+  resetStateButtons();
+  iconCategoria3.src = "./assets/icon/boton-cartas-3-on.png";
   addLettersByCategory(2);
 }
 botonCategoria4.onclick = () => {
+  resetStateButtons();
+  iconCategoria4.src = "./assets/icon/boton-cartas-4-on.png";
   addLettersByCategory(3);
 }
 
@@ -442,106 +533,17 @@ buttonForwardLetters.onclick = () =>{
 
 // Manejo de funciones de botones de carrusel de imagenes
 
-const buttonBack = document.querySelector('.button_back');
-const buttonForward = document.querySelector('.button_forward');
-const carruselContainer = document.querySelector('.carrusel__images');
-const imageContainer = document.querySelectorAll('.image__container');
+const imageContainer = document.querySelectorAll('.galery__container figure');
 
-buttonForward.onclick = () => {
-  const addPixelMoved = 282;
-  const pixelsNow = carruselContainer.scrollLeft;
-  carruselContainer.scrollLeft = pixelsNow + addPixelMoved;
-}
-
-buttonBack.onclick = () => {
-  const addPixelMoved = 282;
-  const pixelsNow = carruselContainer.scrollLeft;
-  carruselContainer.scrollLeft = pixelsNow - addPixelMoved;
-}
 
 imageContainer.forEach((item)=> {
   item.onclick = (e) => {
     const fragmentHTML = `
-      <button onclick="toggleModal">X</button>
-      <img class="image" src="${e.target.src}" alt="${e.target.alt}">
+      <div class="image__container">
+        <img class="image" src="${e.target.children[0].src}" alt="${e.target.children[0].alt}">
+      </div>
     `;
     modalContainer.innerHTML=fragmentHTML;  
     toggleModal();
   }
 });
-
-// Manejo funcionalidad formulario de cartas
-
-const buttonSend = document.querySelector('.button__send');
-const errorContainer1 = document.querySelector('.description__container>.message__error');
-const errorContainer2 = document.querySelector('.file__container>.message__error');
-const errorContainer3 = document.querySelector('.state__request>.message__error');
-
-const clearMessage = () => {
-  setTimeout(()=>{
-    errorContainer3.textContent = '';
-  },4100);
-}
-
-const escapeHTML = (str) => {
-  return str.replace(/[&<>"'/]/g, function (s) {
-    return {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;',
-      "/": '&#x2F;'
-    }[s];
-  });
-}
-
-buttonSend.onclick = (e)=> {
-  e.preventDefault();
-  const form = document.querySelector('#form__letter');
-  const formData = new FormData(form);
-
-  let condicion1, condicion2 = false;
-
-  formData.forEach((value, key) =>{
-    if(key=='description') {
-      if(!value) {
-        errorContainer1.textContent = 'Falta llenar el campo descripción.';
-      } else {
-        formData.set('description', escapeHTML(value));
-        errorContainer1.textContent = '';
-        condicion1 = true; 
-      }
-    } 
-    if(key=='archivo') {
-      if(!value.name){
-        errorContainer2.textContent = 'Falta subir el archivo de imagen.';
-      } else {
-        errorContainer2.textContent = '';
-        condicion2 = true; 
-      }
-    }
-  })
-  
-  if(condicion1 && condicion2) {
-    errorContainer3.textContent = 'Enviando postal, espera por favor.';
-    fetch('http://localhost:5000/api/v1/send-letter', {
-      method: 'POST',
-      body: formData
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data.message == 'send') {
-        form.reset();
-        errorContainer3.textContent = 'Gracias hemos envidado tu postal.';
-        clearMessage();
-      }
-    })
-    .catch(err => {
-      console.error(err)
-      errorContainer3.textContent = 'No pudimos enviar tu postal, intenta más tarde.';
-      form.reset();
-      clearMessage();
-    }); 
-  }   
-}

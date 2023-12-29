@@ -187,8 +187,44 @@ const dataVideos1 = [
   }
 ]
 
+//Informaqcion videos del exterior
+
 export { dataVideos1 };
 
+const dataVideos2 = [
+{
+  title: "La búsqueda de Víctor Úsuga: más de dos décadas buscando a Rubén Usuga, su padre | #LaBúsquedaRepara",
+  url: "https://www.youtube.com/embed/--p2JAjLJuQ?si=OZDa6awdsfpAB0NG",
+  region:"Suecia"
+},
+{
+  title: "La historia de Lilia y Juber en las voces de sus familiares | #LaBúsquedaRepara",
+  url: "https://www.youtube.com/embed/Ejh-tfhmK28?si=jzqj_ISfDBKP_URw",
+  region:"España"
+},
+{
+  title: "Un poema para Marino. Su pareja lo busca hace más de tres décadas | #LaBúsquedaRepara",
+  url: "https://www.youtube.com/embed/TmvYnkC4KXU?si=UXX8LSQsUgnwPsDa",
+  region:"Inglaterra"
+},
+{
+  title: "Mercy Quiñonez busca desde el exterior a su hermano desaparecido en 1985 | #LaBúsquedaRepara",
+  url: "https://www.youtube.com/embed/An5JqG6FoHY?si=wbl_jNHufFpOu9lp",
+  region:"Estados Unidos"
+},
+{
+  title: "Luisa Ríos busca desde el exterior a su padre desaparecido en el año 2000 | #LaBúsquedaRepara",
+  url: "https://www.youtube.com/embed/4tb_mLs0F6o?si=VTe0HXN70OkCZhv0",
+  region:"Suecia"
+},
+{
+  title: "La historia de Lilia y Juber en las voces de sus familiares.",
+  url: "https://www.youtube.com/embed/Ejh-tfhmK28?si=jzqj_ISfDBKP_URw",
+  region:"España"
+}
+];
+
+export { dataVideos2 };
 
 // info cartas 
 
